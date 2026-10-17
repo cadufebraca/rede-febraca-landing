@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Base ===== */
+@layer base {
+  html {
+    /* Compensa o menu fixo ao navegar por âncoras */
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-branco font-sans text-texto antialiased;
+  }
+
+  /* Rolagem suave só para quem não pediu redução de movimento */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Foco visível na navegação por teclado.
+     A cor do contorno muda conforme o fundo da seção (variável --foco). */
+  :root {
+    --foco: #263882;
+  }
+  :focus-visible {
+    outline: 3px solid var(--foco);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* ===== Componentes ===== */
+@layer components {
+  /* Fundos escuros: contorno laranja; fundo laranja: contorno navy */
+  .foco-claro {
+    --foco: #F79A22;
+  }
+  .foco-escuro {
+    --foco: #212B5E;
+  }
+
+  /* Botão base: altura mínima de 48px, fácil de tocar */
+  .btn {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded px-6 py-3 text-center font-condensed text-lg font-bold uppercase tracking-wide transition duration-200;
+  }
+  .btn-laranja {
+    @apply bg-laranja text-navy hover:-translate-y-0.5 hover:shadow-lg;
+  }
+  .btn-navy {
+    @apply bg-navy text-branco hover:-translate-y-0.5 hover:bg-royal hover:shadow-lg;
+  }
+  .btn-contorno {
+    @apply border-2 border-branco text-branco hover:bg-branco hover:text-navy;
+  }
+
+  /* Títulos de seção: Anton, sempre em caixa alta */
+  .titulo-secao {
+    @apply font-display text-4xl uppercase leading-none md:text-5xl;
+  }
+
+  /* Peças do padrão de quadradinhos: entrada rápida em sequência */
+  .peca {
+    animation: peca-entrada 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: calc(var(--i, 0) * 45ms);
+  }
+}
+
+@keyframes peca-entrada {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Respeita a opção de reduzir animações do sistema */
+@media (prefers-reduced-motion: reduce) {
+  .peca {
+    animation: none;
+  }
+  .btn {
+    transition: none;
+  }
+  .btn:hover {
+    transform: none;
+  }
+}
