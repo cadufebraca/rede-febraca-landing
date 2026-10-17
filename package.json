@@ -1,0 +1,13 @@
+{
+  "name": "rede-febraca-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page de cadastro de ONGs afiliadas à Rede FEBRACA",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

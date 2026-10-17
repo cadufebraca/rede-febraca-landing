@@ -1,0 +1,10 @@
+# Dependências do npm (reinstale com: npm install)
+node_modules/
+
+# Configurações locais do editor/Claude e script de publicação
+.claude/
+publicar.ps1
+
+# Sistema
+Thumbs.db
+.DS_Store

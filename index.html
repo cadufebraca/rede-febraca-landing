@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rede FEBRACA | Cadastre sua ONG</title>
+  <meta name="description" content="A Rede FEBRACA ajuda sua ONG a crescer e evoluir, com apoio gratuito, voz em nível nacional e uma comunidade que entende o seu dia a dia.">
+  <meta name="theme-color" content="#212B5E">
+
+  <!-- Open Graph (compartilhamento em redes sociais e WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Rede FEBRACA | Vamos juntos transformar a Causa Animal no Brasil">
+  <meta property="og:description" content="Somos a única federação do Brasil dedicada a fortalecer as ONGs de proteção animal.">
+
+  <!-- Fontes oficiais: Anton, Barlow Condensed 600/700 e Barlow 400/500 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS compilado pelo Tailwind CLI (npm run build) -->
+  <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+
+  <!-- Link de acessibilidade: pula direto para o conteúdo -->
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-laranja focus:px-4 focus:py-3 focus:font-condensed focus:font-bold focus:uppercase focus:text-navy">
+    Pular para o conteúdo
+  </a>
+
+  <!-- Ícones de traço reutilizáveis (padrão do topo e benefícios) -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden" aria-hidden="true">
+    <defs>
+      <symbol id="i-pata" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8.5 16.6c0-2.3 1.6-4.1 3.5-4.1s3.5 1.8 3.5 4.1c0 1.4-1 2.4-2.2 2.4-.6 0-.9-.4-1.3-.4s-.7.4-1.3.4c-1.2 0-2.2-1-2.2-2.4z"/>
+        <ellipse cx="5.8" cy="11" rx="1.6" ry="2.1"/>
+        <ellipse cx="9.4" cy="6.4" rx="1.6" ry="2.3"/>
+        <ellipse cx="14.6" cy="6.4" rx="1.6" ry="2.3"/>
+        <ellipse cx="18.2" cy="11" rx="1.6" ry="2.1"/>
+      </symbol>
+      <symbol id="i-osso" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 10c.7-.7 1.7 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .8.7 1.8 0 2.5l-7 7c-.7.7-1.7 0-2.5 0a2.5 2.5 0 0 0 0 5c.3 0 .5.2.5.5a2.5 2.5 0 1 0 5 0c0-.8-.7-1.8 0-2.5z"/>
+      </symbol>
+      <symbol id="i-coracao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/>
+      </symbol>
+      <symbol id="i-casa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11 12 3.5 21 11"/>
+        <path d="M5.5 9v11h13V9"/>
+        <path d="M10 20v-5h4v5"/>
+      </symbol>
+      <symbol id="i-mais" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M12 5v14M5 12h14"/>
+      </symbol>
+      <symbol id="i-bolinha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="8.5"/>
+        <path d="M6 6.3c4.3 1 7.8 4.6 8.8 11.4"/>
+        <path d="M3.8 10.8c3.2.6 6.3 3.3 7 9.6"/>
+        <path d="M10.8 3.6c3.4 1.6 6.2 4.4 7.6 8.2"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ==================== 1. MENU FIXO ==================== -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-creme bg-branco">
+    <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6" aria-label="Menu principal">
+      <!-- Logo positivo (link para o topo) -->
+      <a href="#topo" class="flex min-h-[44px] shrink-0 items-center">
+        <img src="logo-febraca.png" alt="FEBRACA – Federação Brasileira da Causa Animal" width="150" height="40" class="h-9 w-auto sm:h-10">
+      </a>
+
+      <!-- Links no computador -->
+      <div class="hidden items-center gap-6 md:flex">
+        <ul class="flex items-center gap-5 font-condensed text-lg font-semibold uppercase tracking-wide text-royal">
+          <li><a href="#beneficios" class="inline-flex min-h-[44px] items-center hover:text-navy hover:underline hover:decoration-laranja hover:decoration-2 hover:underline-offset-8">Benefícios</a></li>
+          <li><a href="#como-funciona" class="inline-flex min-h-[44px] items-center hover:text-navy hover:underline hover:decoration-laranja hover:decoration-2 hover:underline-offset-8">Como funciona</a></li>
+          <li><a href="#resultados" class="inline-flex min-h-[44px] items-center hover:text-navy hover:underline hover:decoration-laranja hover:decoration-2 hover:underline-offset-8">Resultados</a></li>
+        </ul>
+        <a href="https://forms.febraca.org.br/cadastro-afiliado/" target="_blank" rel="noopener" class="btn btn-laranja px-5 text-base">
+          Cadastrar minha ONG<span class="sr-only"> (abre em nova aba)</span>
+        </a>
+      </div>
+
+      <!-- Botão de menu no celular -->
+      <button id="botao-menu" type="button" class="inline-flex h-12 w-12 items-center justify-center rounded text-royal md:hidden" aria-expanded="false" aria-controls="menu-celular">
+        <span class="sr-only" id="botao-menu-rotulo">Abrir menu</span>
+        <svg id="icone-abrir" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg id="icone-fechar" class="hidden h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </nav>
+
+    <!-- Lista do menu no celular (aberta/fechada pelo botão) -->
+    <div id="menu-celular" class="hidden border-t border-creme bg-branco px-4 pb-6 pt-2 shadow-lg md:hidden">
+      <ul class="font-condensed text-xl font-semibold uppercase tracking-wide text-royal">
+        <li><a href="#beneficios" class="flex min-h-[48px] items-center border-b border-creme">Benefícios</a></li>
+        <li><a href="#como-funciona" class="flex min-h-[48px] items-center border-b border-creme">Como funciona</a></li>
+        <li><a href="#resultados" class="flex min-h-[48px] items-center border-b border-creme">Resultados</a></li>
+      </ul>
+      <a href="https://forms.febraca.org.br/cadastro-afiliado/" target="_blank" rel="noopener" class="btn btn-laranja mt-5 w-full">
+        Cadastrar minha ONG<span class="sr-only"> (abre em nova aba)</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- ==================== 2. TOPO (HERO) ==================== -->
+    <section id="topo" class="foco-claro overflow-hidden bg-navy pb-16 pt-24 text-branco md:pb-20 md:pt-28 lg:pb-24 lg:pt-32" aria-labelledby="titulo-topo">
+      <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12">
+
+        <!-- Padrão de quadradinhos (decorativo): 6x2 no celular, 5x5 no computador -->
+        <div class="lg:order-2 lg:col-span-5">
+          <div id="padrao" class="mx-auto grid sm:mx-0 lg:mx-auto w-full max-w-md grid-cols-6 lg:max-w-[440px] lg:grid-cols-5" aria-hidden="true"></div>
+        </div>
+
+        <div class="lg:order-1 lg:col-span-7">
+          <h1 id="titulo-topo" class="font-display text-[2.6rem] uppercase leading-[1.02] sm:text-6xl lg:text-7xl">
+            Vamos juntos transformar a Causa Animal no Brasil
+          </h1>
+
+          <p class="mt-6 max-w-xl border-l-4 border-laranja pl-4 font-sans text-lg font-medium leading-relaxed md:text-xl">
+            A Rede FEBRACA ajuda sua ONG a crescer e evoluir, com apoio gratuito, voz em nível nacional e uma comunidade que entende o seu dia a dia.
+          </p>
+
+          <p class="mt-4 max-w-xl text-base leading-relaxed md:text-lg">
+            Somos a única federação do Brasil dedicada a fortalecer as ONGs de proteção animal.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <a href="https://forms.febraca.org.br/cadastro-afiliado/" target="_blank" rel="noopener" class="btn btn-laranja">
+              Quero fazer parte da Rede<span class="sr-only"> (abre em nova aba)</span>
+            </a>
+            <a href="#como-funciona" class="btn btn-contorno">Ver como funciona</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. ABERTURA ==================== -->
+    <section class="bg-branco py-16 md:py-24" aria-label="Abertura">
+      <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <p class="font-condensed text-2xl font-semibold leading-snug text-royal md:text-3xl md:leading-snug">
+          Você resgata, cuida, castra, encaminha para adoção e ainda precisa dar conta das contas, da papelada e das redes sociais. Muitas vezes, quase sozinho.
+        </p>
+        <span class="mx-auto mt-8 block h-1 w-16 rounded bg-laranja" aria-hidden="true"></span>
+        <p class="mt-8 text-lg leading-relaxed md:text-xl">
+          A gente sabe como é. Por isso criamos a Rede FEBRACA: para que nenhuma ONG precise aprender tudo do zero.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== 4. BENEFÍCIOS ==================== -->
+    <!-- Animação de rolagem: a "tela" com os cards começa inclinada e se endireita
+         conforme a pessoa rola (adaptação em JS puro do ContainerScroll). -->
+    <section id="beneficios" class="overflow-hidden bg-creme py-16 md:py-24" aria-labelledby="titulo-beneficios">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 [perspective:1200px]">
+        <h2 id="titulo-beneficios" class="rolagem-titulo titulo-secao text-center text-royal">O que sua ONG ganha</h2>
+
+        <!-- Moldura (tela) inclinada pela animação -->
+        <div class="rolagem-tela mt-10 rounded-[30px] border-4 border-royal bg-navy p-2 md:mt-12 md:p-4">
+        <ul class="grid gap-4 rounded-2xl bg-creme p-3 sm:p-4 md:gap-6 md:p-6 lg:grid-cols-3">
+          <!-- Assessoria gratuita -->
+          <li class="rounded-b border-t-4 border-laranja bg-branco p-6 lg:p-8">
+            <span class="flex h-14 w-14 items-center justify-center rounded bg-royal text-branco" aria-hidden="true">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="2.5" width="7" height="4" rx="1"/><path d="M8.5 4.5H6.5a1.5 1.5 0 0 0-1.5 1.5v14a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5h-2"/><path d="m9 14 2 2 4-4.5"/></svg>
+            </span>
+            <h3 class="mt-5 font-condensed text-2xl font-bold text-royal">Assessoria gratuita</h3>
+            <p class="mt-3 leading-relaxed">Orientação prática para organizar e fortalecer sua ONG: gestão, documentação, captação de recursos e comunicação. Tudo explicado de forma simples, sem custo.</p>
+          </li>
+
+          <!-- Representação nacional -->
+          <li class="rounded-b border-t-4 border-laranja bg-branco p-6 lg:p-8">
+            <span class="flex h-14 w-14 items-center justify-center rounded bg-royal text-branco" aria-hidden="true">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21v-9M9.7 21v-9M14.3 21v-9M19 21v-9"/><path d="M2.5 9.5 12 3l9.5 6.5z"/></svg>
+            </span>
+            <h3 class="mt-5 font-condensed text-2xl font-bold text-royal">Representação nacional</h3>
+            <p class="mt-3 leading-relaxed">Sua ONG passa a ter voz onde as decisões são tomadas. Levamos as necessidades da causa animal ao Congresso, aos governos e aos grandes parceiros do setor.</p>
+          </li>
+
+          <!-- Troca com quem vive a sua realidade -->
+          <li class="rounded-b border-t-4 border-laranja bg-branco p-6 lg:p-8">
+            <span class="flex h-14 w-14 items-center justify-center rounded bg-royal text-branco" aria-hidden="true">
+              <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20.5c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/><circle cx="17" cy="9" r="2.7"/><path d="M16.5 14.1c2.9.3 5 2.7 5 5.9"/></svg>
+            </span>
+            <h3 class="mt-5 font-condensed text-2xl font-bold text-royal">Troca com quem vive a sua realidade</h3>
+            <p class="mt-3 leading-relaxed">Converse com outras ONGs que enfrentam os mesmos desafios que você. Lives, encontros e uma comunidade para trocar ideias, tirar dúvidas e se fortalecer junto.</p>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. COMO FUNCIONA ==================== -->
+    <section id="como-funciona" class="bg-branco py-16 md:py-24" aria-labelledby="titulo-como-funciona">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <h2 id="titulo-como-funciona" class="titulo-secao text-center text-royal">Como funciona</h2>
+        <p class="mt-4 text-center font-condensed text-xl font-semibold text-texto md:text-2xl">Quatro passos simples para sua ONG entrar na Rede.</p>
+
+        <!-- Linha que liga os passos: vertical no celular, horizontal no computador -->
+        <div class="relative mx-auto mt-12 max-w-2xl lg:max-w-none">
+        <span class="absolute bottom-7 left-7 top-7 w-0.5 -translate-x-1/2 bg-azulclaro lg:bottom-auto lg:left-[12.5%] lg:right-[12.5%] lg:h-0.5 lg:w-auto lg:translate-x-0 lg:-translate-y-1/2" aria-hidden="true"></span>
+        <ol class="relative grid gap-10 lg:grid-cols-4 lg:gap-6">
+
+          <li class="relative flex gap-5 lg:flex-col lg:items-center lg:text-center">
+            <span class="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-royal font-condensed text-2xl font-bold text-branco" aria-hidden="true">1</span>
+            <div>
+              <h3 class="font-condensed text-2xl font-bold text-royal"><span class="sr-only">Passo 1: </span>Cadastre-se</h3>
+              <p class="mt-2 leading-relaxed">Preencha o formulário com os dados da sua ONG.</p>
+            </div>
+          </li>
+
+          <li class="relative flex gap-5 lg:flex-col lg:items-center lg:text-center">
+            <span class="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-royal font-condensed text-2xl font-bold text-branco" aria-hidden="true">2</span>
+            <div>
+              <h3 class="font-condensed text-2xl font-bold text-royal"><span class="sr-only">Passo 2: </span>Confira seu e-mail</h3>
+              <p class="mt-2 leading-relaxed">Você vai receber as próximas orientações e o Termo de Adesão.</p>
+            </div>
+          </li>
+
+          <li class="relative flex gap-5 lg:flex-col lg:items-center lg:text-center">
+            <span class="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-royal font-condensed text-2xl font-bold text-branco" aria-hidden="true">3</span>
+            <div>
+              <h3 class="font-condensed text-2xl font-bold text-royal"><span class="sr-only">Passo 3: </span>Assine o Termo de Adesão</h3>
+              <p class="mt-2 leading-relaxed">É o passo que oficializa a entrada da sua ONG na Rede.</p>
+            </div>
+          </li>
+
+          <!-- Último passo com número em laranja -->
+          <li class="relative flex gap-5 lg:flex-col lg:items-center lg:text-center">
+            <span class="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-laranja font-condensed text-2xl font-bold text-navy" aria-hidden="true">4</span>
+            <div>
+              <h3 class="font-condensed text-2xl font-bold text-royal"><span class="sr-only">Passo 4: </span>Entre na comunidade</h3>
+              <p class="mt-2 leading-relaxed">Pronto! Agora você faz parte da Rede FEBRACA.</p>
+            </div>
+          </li>
+        </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. RESULTADOS ==================== -->
+    <section id="resultados" class="foco-claro bg-royal py-16 text-branco md:py-24" aria-labelledby="titulo-resultados">
+      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6">
+        <h2 id="titulo-resultados" class="font-condensed text-lg font-bold uppercase tracking-[0.2em]">Quem já fez acontecer</h2>
+
+        <p class="mt-6">
+          <span class="block font-display text-6xl uppercase leading-none text-laranja sm:text-7xl md:text-8xl lg:text-9xl">R$ 800 mil</span>
+          <span class="mt-3 block font-condensed text-2xl font-bold uppercase tracking-wide md:text-3xl">Captados em um ano</span>
+        </p>
+
+        <p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed">
+          A AAANO, ONG de proteção animal, saiu do aperto para um novo patamar ao organizar sua gestão, criar parcerias e apostar em campanhas bem planejadas. Esse caminho virou método, e é exatamente o que compartilhamos com cada ONG da Rede.
+        </p>
+
+        <p class="mx-auto mt-6 max-w-2xl font-condensed text-2xl font-semibold leading-snug">
+          Se uma ONG conseguiu, a sua também pode. E não vai precisar fazer isso sozinha.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CHAMADA FINAL ==================== -->
+    <section class="foco-escuro bg-laranja py-16 text-navy md:py-20" aria-labelledby="titulo-chamada">
+      <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+        <h2 id="titulo-chamada" class="titulo-secao">Sua ONG não precisa crescer sozinha</h2>
+        <p class="mt-5 text-lg font-medium leading-relaxed md:text-xl">Junte-se às organizações que estão transformando a proteção animal no Brasil.</p>
+        <a href="https://forms.febraca.org.br/cadastro-afiliado/" target="_blank" rel="noopener" class="btn btn-navy mt-8 w-full sm:w-auto sm:px-10">
+          Cadastrar minha ONG<span class="sr-only"> (abre em nova aba)</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 8. RODAPÉ ==================== -->
+  <footer class="foco-claro bg-preto py-12 text-branco">
+    <div class="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 md:grid-cols-3">
+      <div>
+        <img src="logo-febraca-negativo.png" alt="FEBRACA – Federação Brasileira da Causa Animal" width="180" height="48" class="h-12 w-auto" loading="lazy">
+        <p class="mt-4 font-condensed text-xl font-semibold">Vamos juntos transformar a Causa Animal.</p>
+      </div>
+
+      <nav aria-label="Links do rodapé">
+        <ul class="font-condensed text-lg font-semibold uppercase tracking-wide">
+          <li><a href="#beneficios" class="inline-flex min-h-[44px] items-center hover:text-laranja">Benefícios</a></li>
+          <li><a href="#como-funciona" class="inline-flex min-h-[44px] items-center hover:text-laranja">Como funciona</a></li>
+          <li><a href="#resultados" class="inline-flex min-h-[44px] items-center hover:text-laranja">Resultados</a></li>
+          <li><a href="https://forms.febraca.org.br/cadastro-afiliado/" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center text-laranja hover:underline">Cadastrar minha ONG<span class="sr-only"> (abre em nova aba)</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="text-base">
+        <p><a href="https://www.febraca.org.br" target="_blank" rel="noopener" class="inline-flex min-h-[44px] items-center hover:text-laranja">www.febraca.org.br<span class="sr-only"> (abre em nova aba)</span></a></p>
+        <p><a href="mailto:diretoria@febraca.org.br" class="inline-flex min-h-[44px] items-center break-all hover:text-laranja">diretoria@febraca.org.br</a></p>
+      </div>
+    </div>
+
+    <p class="mx-auto mt-10 max-w-6xl border-t border-texto px-4 pt-6 text-sm sm:px-6">
+      © 2026 FEBRACA – Federação Brasileira da Causa Animal. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script>
+    /* ==================== MENU DO CELULAR ==================== */
+    (function () {
+      var botao = document.getElementById('botao-menu');
+      var menu = document.getElementById('menu-celular');
+      var rotulo = document.getElementById('botao-menu-rotulo');
+      var iconeAbrir = document.getElementById('icone-abrir');
+      var iconeFechar = document.getElementById('icone-fechar');
+
+      function definirMenu(aberto) {
+        menu.classList.toggle('hidden', !aberto);
+        iconeAbrir.classList.toggle('hidden', aberto);
+        iconeFechar.classList.toggle('hidden', !aberto);
+        botao.setAttribute('aria-expanded', String(aberto));
+        rotulo.textContent = aberto ? 'Fechar menu' : 'Abrir menu';
+      }
+
+      botao.addEventListener('click', function () {
+        definirMenu(botao.getAttribute('aria-expanded') !== 'true');
+      });
+
+      // Fecha ao tocar em um link do menu
+      menu.addEventListener('click', function (e) {
+        if (e.target.closest('a')) definirMenu(false);
+      });
+
+      // Fecha com a tecla Esc e devolve o foco ao botão
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && botao.getAttribute('aria-expanded') === 'true') {
+          definirMenu(false);
+          botao.focus();
+        }
+      });
+    })();
+
+    /* ==================== PADRÃO DE QUADRADINHOS ====================
+       Cada peça: [forma, cor, rotação, ícone]
+       Formas: q = quarto de círculo, m = meio círculo, s = quadrado.
+       As 12 primeiras peças formam a grade 6x2 do celular;
+       as 25 formam a grade 5x5 do computador. */
+    (function () {
+      var CORES = {
+        R: { fundo: '#263882', icone: '#FFFFFF' }, // royal
+        L: { fundo: '#F79A22', icone: '#212B5E' }, // laranja
+        A: { fundo: '#AEB7D9', icone: '#212B5E' }, // azul-claro
+        B: { fundo: '#FFFFFF', icone: '#263882' }  // branco
+      };
+
+      var PECAS = [
+        ['s','R',0,'osso'],   ['q','L',0,'bolinha'], ['m','A',180,'coracao'], ['q','B',90,'casa'],   ['s','L',0,'pata'],
+        ['q','A',270,'mais'], ['s','B',0,'pata'],    ['q','R',180,'osso'],    ['s','L',0,'coracao'], ['m','R',0,'mais'],
+        ['m','L',90,'casa'],  ['q','R',0,'coracao'], ['s','A',0,'bolinha'],   ['q','L',270,'mais'],  ['s','B',0,'osso'],
+        ['s','L',0,'mais'],   ['m','B',0,'osso'],    ['q','L',90,'pata'],     ['s','R',0,'casa'],    ['q','A',180,'bolinha'],
+        ['q','R',90,'coracao'], ['s','A',0,'casa'],  ['m','R',270,'mais'],    ['q','B',0,'pata'],    ['s','L',0,'osso']
+      ];
+
+      // Desenho base de cada forma (área 100x100) e onde o ícone fica dentro dela
+      var FORMAS = {
+        s: { d: 'M0 0H100V100H0Z',                 cx: 50, cy: 50, tam: 44 },
+        q: { d: 'M0 0A100 100 0 0 1 100 100H0Z',   cx: 38, cy: 62, tam: 36 },
+        m: { d: 'M0 100A50 50 0 0 1 100 100Z',     cx: 50, cy: 76, tam: 28 }
+      };
+
+      // Gira o ponto do ícone junto com a forma, mas mantém o ícone em pé
+      function girar(x, y, graus) {
+        var r = graus * Math.PI / 180, dx = x - 50, dy = y - 50;
+        return [50 + dx * Math.cos(r) - dy * Math.sin(r), 50 + dx * Math.sin(r) + dy * Math.cos(r)];
+      }
+
+      var html = PECAS.map(function (p, i) {
+        var forma = FORMAS[p[0]], cor = CORES[p[1]], rot = p[2];
+        var c = girar(forma.cx, forma.cy, rot);
+        var x = (c[0] - forma.tam / 2).toFixed(1), y = (c[1] - forma.tam / 2).toFixed(1);
+        var classes = 'peca block' + (i >= 12 ? ' hidden lg:block' : '');
+        return '<svg class="' + classes + '" style="--i:' + i + '" viewBox="0 0 100 100" focusable="false">' +
+          '<path d="' + forma.d + '" fill="' + cor.fundo + '" transform="rotate(' + rot + ' 50 50)"/>' +
+          '<use href="#i-' + p[3] + '" x="' + x + '" y="' + y + '" width="' + forma.tam + '" height="' + forma.tam + '" style="color:' + cor.icone + '"/>' +
+          '</svg>';
+      }).join('');
+
+      document.getElementById('padrao').innerHTML = html;
+    })();
+
+    /* ==================== ANIMAÇÃO DE ROLAGEM (BENEFÍCIOS) ====================
+       Adaptação em JS puro do efeito ContainerScroll:
+       a tela começa inclinada (rotateX) e levemente escalada e se endireita
+       conforme a seção sobe na tela. Só usa transform (fluido a 60fps)
+       e não roda para quem pediu para reduzir animações. */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var secao = document.getElementById('beneficios');
+      var titulo = secao.querySelector('.rolagem-titulo');
+      var tela = secao.querySelector('.rolagem-tela');
+      var agendado = false;
+
+      function limitar(v) { return Math.min(1, Math.max(0, v)); }
+
+      function atualizar() {
+        agendado = false;
+        var alturaJanela = window.innerHeight;
+        var celular = window.innerWidth <= 768;
+        // 0 = topo da tela entrando por baixo; 1 = tela a 55% do topo da janela
+        // (assim ela já chega reta quando se clica em "Benefícios" no menu)
+        var topo = tela.getBoundingClientRect().top;
+        var p = limitar((alturaJanela - topo) / (alturaJanela * 0.45));
+
+        var giro = (celular ? 14 : 20) * (1 - p);                // 20° → 0°
+        var escala = celular ? 0.9 + 0.1 * p : 1.05 - 0.05 * p;  // celular 0,9 → 1 | computador 1,05 → 1
+        var subida = 40 * (1 - p);                               // título sobe 40px → 0
+
+        tela.style.transform = 'rotateX(' + giro.toFixed(2) + 'deg) scale(' + escala.toFixed(4) + ')';
+        titulo.style.transform = 'translateY(' + subida.toFixed(1) + 'px)';
+      }
+
+      // No máximo um cálculo por quadro, mesmo com muitos eventos de rolagem
+      function agendar() {
+        if (!agendado) { agendado = true; requestAnimationFrame(atualizar); }
+      }
+
+      tela.style.willChange = 'transform';
+      tela.style.boxShadow = '0 9px 20px rgba(33,43,94,.29), 0 37px 37px rgba(33,43,94,.26), 0 84px 50px rgba(33,43,94,.15), 0 149px 60px rgba(33,43,94,.04)';
+      window.addEventListener('scroll', agendar, { passive: true });
+      window.addEventListener('resize', agendar);
+      atualizar();
+    })();
+  </script>
+</body>
+</html>
